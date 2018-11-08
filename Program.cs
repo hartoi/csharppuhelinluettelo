@@ -7,23 +7,46 @@ using System;
 using System.Collections.Generic;
 class Program
 {
+    class henkilo {
+        public string nimi;
+        public string numero;
+        public string osoite;
+        public henkilo(string argnimi, string argnumero, string argosoite)
+        {
+            nimi = argnimi;
+            numero = argnumero;
+            osoite = argosoite;
+        }
+    }
     static void Main()
+    {
+        henkilo kalle = new henkilo("Kalle", "050123123", "Pajutie 2");
+        henkilo pekka = new henkilo("Pekka", "050666666", "Kumitie 2");
+        // Kokeile alla olevaa ja koita saada hakutoiminto toimimaan
+        // sen avulla, niin että for-silmukassa hyödynnetään contains-funktioita
+        // Luodaan sanakirja-muuttujarakenne
+        Dictionary<string, henkilo> puhelin_luettelo = new Dictionary<string, henkilo>();
+        // Lisätään siihen tietoa
+        puhelin_luettelo.Add("Kalle", kalle);
+        puhelin_luettelo.Add("Pekka", pekka);
+
+        Console.WriteLine(puhelin_luettelo["Kalle"].nimi);
+    } // main
+    static void Main2()
     {
         // Kokeile alla olevaa ja koita saada hakutoiminto toimimaan
         // sen avulla, niin että for-silmukassa hyödynnetään contains-funktioita
         // Luodaan sanakirja-muuttujarakenne
         Dictionary<string, string> puhelin_luettelo = new Dictionary<string, string>();
-        
         // Lisätään siihen tietoa
         puhelin_luettelo.Add("Pekka Heikera", "040234345");
         puhelin_luettelo.Add("Jorma", "050123345");
         puhelin_luettelo.Add("Jorma Kariluoto", "050123345");
         puhelin_luettelo.Add("Kalle", "050666666");
         // Esimerkki
-        Console.WriteLine("Esim Jorma:"+puhelin_luettelo["Jorma"]);
+        Console.WriteLine("Esim Jorma:" + puhelin_luettelo["Jorma"]);
         // Tehtävä 1: Lisää puhelinluetteloon yksi nimi
         // ja tulosta se nimi
-
         // Tehtävä 2: Tulosta koko puhelinluettelon sisältö
         // Hyödynnä tätä
         // List<string> nimet = new List<string>(puhelin_luettelo.Keys);
