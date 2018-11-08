@@ -18,7 +18,12 @@ class Program
             osoite = argosoite;
         }
     }
-    static void Main()
+
+    static void Main() {
+        // Kopio tähän joko MainHasteen tai MainPerus sisältö
+    }
+
+    static void MainHaaste()
     {
         henkilo kalle = new henkilo("Kalle", "050123123", "Pajutie 2");
         henkilo pekka = new henkilo("Pekka", "050666666", "Kumitie 2");
@@ -31,8 +36,12 @@ class Program
         puhelin_luettelo.Add("Pekka", pekka);
 
         Console.WriteLine(puhelin_luettelo["Kalle"].nimi);
+        // Tehtävä 1: Lisää kolme henkilöä
+        // Tehtävä 2: Tulosta kaikki tiedot puhelin_luettelossa
+        // Tehtävä 3: Toteuta hakusysteemi
+        // HC-Tehtävä : Toteuta siten, että voidaan hakea myös osoitteen perusteella
     } // main
-    static void Main2()
+    static void MainPerus()
     {
         // Kokeile alla olevaa ja koita saada hakutoiminto toimimaan
         // sen avulla, niin että for-silmukassa hyödynnetään contains-funktioita
@@ -48,7 +57,7 @@ class Program
         // Tehtävä 1: Lisää puhelinluetteloon yksi nimi
         // ja tulosta se nimi
         // Tehtävä 2: Tulosta koko puhelinluettelon sisältö
-        // Hyödynnä tätä
+        // Hyödynnä tätä+
         // List<string> nimet = new List<string>(puhelin_luettelo.Keys);
 
         // Luetaan avaimet ( Pekka Heikera, Jorma, Jorma Kariluoto, Kalle )
