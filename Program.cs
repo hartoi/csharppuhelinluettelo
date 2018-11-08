@@ -20,7 +20,13 @@ class Program
         puhelin_luettelo.Add("Jorma Kariluoto", "050123345");
         puhelin_luettelo.Add("Kalle", "050666666");
         // Esimerkki
-        Console.WriteLine("Esim:"+puhelin_luettelo["Jorma"]);
+        Console.WriteLine("Esim Jorma:"+puhelin_luettelo["Jorma"]);
+        // Tehtävä 1: Lisää puhelinluetteloon yksi nimi
+        // ja tulosta se nimi
+
+        // Tehtävä 2: Tulosta koko puhelinluettelon sisältö
+        // Hyödynnä tätä
+        // List<string> nimet = new List<string>(puhelin_luettelo.Keys);
 
         // Luetaan avaimet ( Pekka Heikera, Jorma, Jorma Kariluoto, Kalle )
         // ne nimet listaan
