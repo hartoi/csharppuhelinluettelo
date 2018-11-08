@@ -13,13 +13,14 @@ class Program
         // sen avulla, niin että for-silmukassa hyödynnetään contains-funktioita
         // Luodaan sanakirja-muuttujarakenne
         Dictionary<string, string> puhelin_luettelo = new Dictionary<string, string>();
-
+        
         // Lisätään siihen tietoa
         puhelin_luettelo.Add("Pekka Heikera", "040234345");
         puhelin_luettelo.Add("Jorma", "050123345");
         puhelin_luettelo.Add("Jorma Kariluoto", "050123345");
         puhelin_luettelo.Add("Kalle", "050666666");
-        
+        // Esimerkki
+        Console.WriteLine("Esim:"+puhelin_luettelo["Jorma"]);
 
         // Luetaan avaimet ( Pekka Heikera, Jorma, Jorma Kariluoto, Kalle )
         // ne nimet listaan
@@ -41,12 +42,7 @@ class Program
             if (nimi.Contains(haettava_nimi) == true)
             {
                 Console.WriteLine("Löytyi");
-                // Tehtävä: tulostetaan puhelinnumero
-                // muista esimerkki
-                // Console.WriteLine(puhelin_luettelo["Kalle"]);
-                // tulostaa "050666666"
-                // mieti tarkaan mitä muuttujia tarvitset ja 
-                // mitkä niiden arvot ovat kyseisellä hetkellä
+                //  Halutaan tulostaa myös puhelinnumero
             }
             else
             {
@@ -60,4 +56,6 @@ class Program
         // Lopetetaan ohjelma
         System.Environment.Exit(1);
     } // main
+
+
 } // class
